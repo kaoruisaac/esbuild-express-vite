@@ -7,7 +7,6 @@ import template from 'server/route/view/template';
 config();
 
 const {
-  HOST = 'localhost',
   HTTP_PORT = 8080,
 } = process.env;
 
@@ -20,8 +19,8 @@ const createServer = async () => {
     const html = template({ req, isProd: true });
     res.status(200).send(html);
   });
-  app.listen(Number(HTTP_PORT), String(HOST), () => {
-    console.log(`server started at http://${HOST}:${HTTP_PORT}`);
+  app.listen(Number(HTTP_PORT), '', () => {
+    console.log(`server started at http://:${HTTP_PORT}`);
   });
 }
 
