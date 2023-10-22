@@ -22,7 +22,7 @@ const createServer = async () => {
     res.status(200).send(html);
   });
   app.listen(Number(HTTP_PORT), '', () => {
-    console.log(`server started at http://:${HTTP_PORT}`);
+    console.log(`server started at http://localhost:${HTTP_PORT}`);
   });
 }
 
